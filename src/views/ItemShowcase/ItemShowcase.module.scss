@@ -1,0 +1,8 @@
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+}

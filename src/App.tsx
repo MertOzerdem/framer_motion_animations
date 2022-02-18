@@ -1,11 +1,12 @@
-import React from 'react';
 import './App.css';
 import WhellSelector from './components/WhellSelector/WhellSelector';
+import ItemShowcase from './views/ItemShowcase/ItemShowcase';
 
 function App() {
   return (
     <div className="App">
-      <WhellSelector />
+      {false && <WhellSelector />}
+      {true && <ItemShowcase />}
     </div>
   );
 }
