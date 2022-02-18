@@ -1,6 +1,6 @@
 import styles from './ItemWhell.module.scss'
 import { motion, useTransform, useMotionValue } from 'framer-motion'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 type ItemWhellProps = {
     index: number,
@@ -8,7 +8,7 @@ type ItemWhellProps = {
 }
 
 const ItemWhell = (props:ItemWhellProps) => {
-    const { index, yOffset } = props
+    const { index } = props
     const y = useMotionValue(0);
     const yRange = [-100, 0, 100];
     const rotateXRange = [-90, 0, 90];
@@ -24,7 +24,7 @@ const ItemWhell = (props:ItemWhellProps) => {
     // }, [])
 
     console.log(index, ' y: ',rotateX.get())
-    useEffect(() => y.onChange(latest => {console.log(index, ' index: ', latest)}), [])
+    // useEffect(() => y.onChange(latest => {console.log(index, ' index: ', latest)}), [index, y])
 
     return (
         <div>

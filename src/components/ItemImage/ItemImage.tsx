@@ -42,7 +42,7 @@ const ItemImage = ({ img, index, setOpenImageId, openImageId }: props) => {
 
     return (
         <motion.div
-            className={styles.itemWrapper}
+            className={`${styles.itemWrapper} ${isOpen ? styles.open : ''}`}
             layout
             variants={variants}
             initial='closed'
@@ -52,9 +52,9 @@ const ItemImage = ({ img, index, setOpenImageId, openImageId }: props) => {
         >
             <motion.img
                 src={img} 
-                className={`${styles.ItemImage} ${isOpen ? styles.open : ''}`}
+                className={`${styles.ItemImage}`}
                 variants={variants} 
-                transition= {{ delay: 0.2, duration: 0.5, ease: "easeInOut"}}
+                transition= {{ delay: 0.2, duration: 0.2, ease: "easeInOut"}}
                 onClick={imgClickHandler}
             />
         </motion.div>

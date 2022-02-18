@@ -1,22 +1,18 @@
 .itemWrapper {
-    // transform-origin: top;
-    // height: 220px;
+    transform-origin: center;
     height: 200px;
     margin: 10px 10px;
 }
 
 .ItemImage {
-    // transform-origin: top;
-    margin: 10px 10px;
     width: auto;
-    // height: 200px;
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #fafafa;
-    // border-radius: 4px;
-    // box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 .open {

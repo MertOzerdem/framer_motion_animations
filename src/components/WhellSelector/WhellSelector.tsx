@@ -1,7 +1,7 @@
 import styles from './WhellSelector.module.scss'
 import { motion } from 'framer-motion'
 import ItemWhell from '../ItemWhell/ItemWhell'
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 
 const items = [
     {
