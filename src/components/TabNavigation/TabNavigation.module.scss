@@ -69,12 +69,20 @@ $contentMargin: 10px;
     background-color: #FFFFFF;
 }
 
+.itemList {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100vw;
+}
+
 .contentWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: $contentMargin;
+    min-width: 100vw;
 }
 
 .content {
