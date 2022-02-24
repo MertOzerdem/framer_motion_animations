@@ -1,12 +1,14 @@
 import './App.css';
 import WhellSelector from './components/WhellSelector/WhellSelector';
 import ItemShowcase from './views/ItemShowcase/ItemShowcase';
+import TabNavigation from './components/TabNavigation/TabNavigation';
 
 function App() {
   return (
     <div className="App">
       {false && <WhellSelector />}
-      {true && <ItemShowcase />}
+      {false && <ItemShowcase />}
+      {true && <TabNavigation />}
     </div>
   );
 }

@@ -32,7 +32,7 @@ const ItemShowcase = () => {
     const getImages = () => {
         if(openImageId === 0) {
             return IMAGES.map((image) => {
-                return <ItemImage 
+                return <ItemImage
                     key={image.id} 
                     img={image.img}
                     index={image.id}

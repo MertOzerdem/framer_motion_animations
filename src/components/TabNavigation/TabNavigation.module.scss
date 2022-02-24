@@ -1,0 +1,86 @@
+$backgroundColor: #FFBB00;
+$colorActive: #FFFFFF;
+$colorInactive: #FF9900;
+$contentColor: #FFC526;
+
+$large: 24px;
+$medium: 20px;
+$small: 16px;
+
+$navigationBarHeight: 3px;
+$borderRadius: 2px;
+
+$contentMargin: 10px;
+
+.navigationWrapper {
+    padding-top: 10px;
+    height: 100vh;
+    width: 100vw;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigationItemsWrapper {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navigationItem {
+    position: relative;
+    font-size: $large;
+    font-weight: bold;
+    width: 30vw;
+    color: $colorInactive;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-bottom: $navigationBarHeight solid $colorInactive;
+
+    & .selectedItem {
+        color: $colorActive;
+    }
+}
+
+.active {
+    color: $colorActive;
+}
+
+.navigationBar {
+    height: $navigationBarHeight;
+    width: 80vw;
+    background-color: $colorInactive;
+    border-radius: $borderRadius;
+}
+
+.activeNavigationBar {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    bottom: -$navigationBarHeight;
+    height: $navigationBarHeight;
+    background-color: #FFFFFF;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: $contentMargin;
+}
+
+.content {
+    background-color: $contentColor;
+    border-radius: 10px;
+    margin: $contentMargin;
+    height: 60px;
+    width: 70vw;
+}

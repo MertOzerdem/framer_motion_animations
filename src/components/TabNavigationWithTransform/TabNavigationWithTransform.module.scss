@@ -1,0 +1,55 @@
+$backgroundColor: #FFBB00;
+$colorActive: #FFFFFF;
+$colorInactive: #FF9900;
+
+$large: 24px;
+$medium: 20px;
+$small: 16px;
+
+$navigationBarHeight: 3px;
+$borderRadius: 2px;
+
+.navigationWrapper {
+    padding-top: 10px;
+    height: 100vh;
+    width: 100vw;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigationItemsWrapper {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    & .selectedItem {
+        color: $colorActive;
+    }
+}
+
+.navigationItem {
+    font-size: $large;
+    font-weight: bold;
+    color: $colorInactive;
+}
+
+.navigationBar {
+    height: $navigationBarHeight;
+    width: 80vw;
+    background-color: $colorInactive;
+    border-radius: $borderRadius;
+}
+
+.activeNavigationBar {
+    height: inherit;
+    border-radius: inherit;
+    width: 33.3%;
+    background-color: $colorActive;
+}
