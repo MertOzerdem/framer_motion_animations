@@ -4,14 +4,14 @@ import WhellSelector from './components/WhellSelector/WhellSelector';
 import ItemShowcase from './views/ItemShowcase/ItemShowcase';
 import TabNavigation from './components/TabNavigation/TabNavigation';
 import CardList from './components/CardList/CardList';
-
-const animations = [0,1,2,3]
+import Carousel from './components/Carousel/Carousel';
 
 const components = [
   <WhellSelector />,
   <ItemShowcase />,
   <TabNavigation />,
-  <CardList />
+  <CardList />,
+  <Carousel />
 ]
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        {animations.map((_, index) => {
+        {components.map((_, index) => {
           return (
             <button key={index} onClick={() => handleClick(index)}>{index}</button>
           )
