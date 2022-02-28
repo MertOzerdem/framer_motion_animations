@@ -15,13 +15,11 @@ const components = [
 ]
 
 function App() {
-  const [selected, setSelected] = useState(3);
+  const [selected, setSelected] = useState(components.length - 1);
 
   const handleClick = (index: number) => {
     setSelected(index);
   }
-
-  console.log(components)
 
   return (
     <div className="App">
@@ -33,10 +31,6 @@ function App() {
         })}
       </div>
       {components[selected]}
-      {/* {false && <WhellSelector />}
-      {false && <ItemShowcase />}
-      {false && <TabNavigation />}
-      {true && <CardList />} */}
     </div>
   );
 }

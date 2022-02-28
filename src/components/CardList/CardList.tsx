@@ -9,8 +9,8 @@ const variants = {
     opened: {
         opacity: 1,
         scale: 1,
-        x: 10,
-        y: 10,
+        x: 50,
+        y: 50,
         transition: {
             duration: 0.3
         }
