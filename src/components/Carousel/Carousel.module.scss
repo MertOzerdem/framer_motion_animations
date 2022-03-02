@@ -8,7 +8,7 @@ $colors: (0: #0099FF, 1: #6633FF, 2: #FFBB00);
     align-items: center;
 }
 
-.cardWrapper {
+.cardList {
     height: 60vh;
     width: 80vw;
     overflow: hidden;
@@ -16,15 +16,23 @@ $colors: (0: #0099FF, 1: #6633FF, 2: #FFBB00);
     flex-direction: row;
 }
 
-.card {
+.cardWrapper {
     height: 60vh;
     width: 80vw;
-    border-radius: 16px;
     min-width: 80vw;
+    transform-style: preserve-3d;
 
     &:not(:last-child) {
         margin-right: 25px;
     }
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 16px;
+    transform-style: flat;
 }
 
 @each $index, $color in $colors {
