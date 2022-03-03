@@ -21,10 +21,10 @@ const Card = ({ index, x, marginRight, width }:CardProps) => {
     });
     const xRange = [-length/2, 0, length/2];
     const rotateYRange = [-45, 0, 45];
-    const scaleRange = [0.9, 1, 0.9]
+    const scaleRange = [0.7, 1, 0.7]
     const rotateY = useTransform(cardX, xRange, rotateYRange);
     const scale = useTransform(cardX, xRange, scaleRange);
-    const getCloser = useTransform(cardX, xRange, [-25, 0, 25]);
+    const getCloser = useTransform(cardX, xRange, [-75, 0, 75]);
     const transformOrigin = useTransform(x, latestX => {
         if (length * index >= animationBias * latestX) return '100% 50% 0px' 
         else return '0% 50% 0px'
@@ -33,13 +33,10 @@ const Card = ({ index, x, marginRight, width }:CardProps) => {
     return (
         <motion.div
             className={`${styles.card} ${styles['card--' + index]}`}
-
             transformTemplate={
-                // ({ x, rotateY }) => `perspective(200px) rotateY(${rotateY}) translateX(${x})`
                 ({ rotateY, scale , x}) => {
-                    console.log(x)
-                    // x = x.replace('px', '%')
-                    return `perspective(400px) scale(${scale}) rotateY(${rotateY}) `
+                    x = x && x.toString().replace('px', '%')
+                    return `scale(${scale}) rotate3d(0, 1, 0, ${rotateY}) translateX(${x})`
                 }
             }
             style={{ rotateY, scale, transformOrigin, x: getCloser }}

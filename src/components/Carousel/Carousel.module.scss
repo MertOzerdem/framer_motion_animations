@@ -12,14 +12,15 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    perspective: 1200px;
 }
 
 .cardWrapper {
     height: 60vh;
     width: 80vw;
     min-width: 80vw;
-    transform-style: flat;
-    background-color: black;
+    transform-style: preserve-3d;
+    // background-color: black;
 
     &:not(:last-child) {
         margin-right: 25px;
