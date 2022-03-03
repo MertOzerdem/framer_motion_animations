@@ -1,8 +1,6 @@
-$colors: (0: #0099FF, 1: #6633FF, 2: #FFBB00);
-
 .contentWrapper {
     height: 100vh;
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +9,7 @@ $colors: (0: #0099FF, 1: #6633FF, 2: #FFBB00);
 .cardList {
     height: 60vh;
     width: 80vw;
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     flex-direction: row;
 }
@@ -20,23 +18,15 @@ $colors: (0: #0099FF, 1: #6633FF, 2: #FFBB00);
     height: 60vh;
     width: 80vw;
     min-width: 80vw;
-    transform-style: preserve-3d;
+    transform-style: flat;
+    background-color: black;
 
     &:not(:last-child) {
         margin-right: 25px;
     }
 }
 
-.card {
-    height: 100%;
-    width: 100%;
-    min-width: 100%;
-    border-radius: 16px;
-    transform-style: flat;
-}
-
-@each $index, $color in $colors {
-    .card--#{$index} {
-      background-color: $color;
-    }
+.dummy {
+    height: 2px;
+    width: 300vh;
 }
