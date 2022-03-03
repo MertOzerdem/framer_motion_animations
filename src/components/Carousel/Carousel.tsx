@@ -12,7 +12,7 @@ interface Shape {
 
 const Carousel = () => {
     const [showCards, setShowCards] = useState(false)
-    const [shape, setShape] = useState<Shape>({marginRight: 0, width: 0})
+    const [shape, setShape] = useState<Shape>({ marginRight: 0, width: 0 })
     const wrapperRef = useRef<any>(null); // configure for TS later
     const controls = useAnimation();
     const x = useMotionValue(0);
@@ -35,7 +35,7 @@ const Carousel = () => {
             let targetItem = animationDirection * Number((x.get() / wrapperRef.current.clientWidth).toFixed());
             let maxNumberOfDragTarget = items.length - 1
 
-            if(maxNumberOfDragTarget < targetItem) {
+            if (maxNumberOfDragTarget < targetItem) {
                 targetItem = maxNumberOfDragTarget
             } else if (targetItem < 0) {
                 targetItem = 0
@@ -53,28 +53,26 @@ const Carousel = () => {
     }
 
     return (
-        <>
-            <div className={styles.contentWrapper}>
-                <div className={styles.cardList} ref={wrapperRef}>
-                    {items.map((_, index) => {
-                        return (
-                            <motion.div 
-                                key={index}
-                                className={`${styles.cardWrapper}`}
-                                drag="x"
-                                dragMomentum={false}
-                                dragElastic={0.9}
-                                onDragEnd={handleDragEnd}
-                                animate={controls}
-                                style={{ x }}
-                            >
-                                {showCards && <Card x={x} index={index} marginRight={shape.marginRight} width={shape.width}/>}
-                            </motion.div>
-                        )})}
-                </div>
+        <div className={styles.contentWrapper}>
+            <div className={styles.cardList} ref={wrapperRef}>
+                {items.map((_, index) => {
+                    return (
+                        <motion.div
+                            key={index}
+                            className={`${styles.cardWrapper}`}
+                            drag="x"
+                            dragMomentum={false}
+                            dragElastic={0.9}
+                            onDragEnd={handleDragEnd}
+                            animate={controls}
+                            style={{ x }}
+                        >
+                            {showCards && <Card x={x} index={index} marginRight={shape.marginRight} width={shape.width} />}
+                        </motion.div>
+                    )
+                })}
             </div>
-            <div className={styles.dummy}></div>
-        </>
+        </div>
     )
 }
 
