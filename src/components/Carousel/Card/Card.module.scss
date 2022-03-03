@@ -1,0 +1,15 @@
+$colors: (0: #0099FF, 1: #6633FF, 2: #FFBB00);
+
+.card {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 16px;
+    transform-style: flat;
+}
+
+@each $index, $color in $colors {
+    .card--#{$index} {
+      background-color: $color;
+    }
+}
