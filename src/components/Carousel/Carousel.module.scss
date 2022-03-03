@@ -1,6 +1,6 @@
 .contentWrapper {
     height: 100vh;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
 .cardList {
     height: 60vh;
     width: 80vw;
-    // overflow: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
 }
