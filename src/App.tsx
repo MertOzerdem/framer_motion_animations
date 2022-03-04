@@ -11,7 +11,7 @@ const components = [
   <ItemShowcase />,
   <TabNavigation />,
   <CardList />,
-  <Carousel />
+  <Carousel />, // fix for desktop and large devices later 
 ]
 
 function App() {
