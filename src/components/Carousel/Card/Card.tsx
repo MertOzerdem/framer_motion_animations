@@ -32,7 +32,7 @@ const Card = ({ index, x, marginRight, width }:CardProps) => {
 
     return (
         <motion.div
-            className={`${styles.card} ${styles['card--' + index]}`}
+            className={`${styles.card} ${styles['card--' + index % 3]}`}
             transformTemplate={
                 ({ rotateY, scale , x}) => {
                     x = x && x.toString().replace('px', '%')

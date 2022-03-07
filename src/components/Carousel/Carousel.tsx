@@ -3,7 +3,7 @@ import { motion, useAnimation, useMotionValue } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react';
 import Card from './Card/Card';
 
-const items = ['A', 'B', 'C']
+const items = ['A', 'B', 'C', 'D', 'E']
 
 interface Shape {
     marginRight: number,
