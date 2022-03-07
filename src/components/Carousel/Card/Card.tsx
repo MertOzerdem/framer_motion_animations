@@ -24,7 +24,7 @@ const Card = ({ index, x, marginRight, width }:CardProps) => {
     const scaleRange = [0.7, 1, 0.7]
     const rotateY = useTransform(cardX, xRange, rotateYRange);
     const scale = useTransform(cardX, xRange, scaleRange);
-    const getCloser = useTransform(cardX, xRange, [-75, 0, 75]);
+    const skidCardX = useTransform(cardX, xRange, [-65, 0, 65]);
     const transformOrigin = useTransform(x, latestX => {
         if (length * index >= animationBias * latestX) return '100% 50% 0px' 
         else return '0% 50% 0px'
@@ -32,14 +32,14 @@ const Card = ({ index, x, marginRight, width }:CardProps) => {
 
     return (
         <motion.div
-            className={`${styles.card} ${styles['card--' + index]}`}
+            className={`${styles.card} ${styles['card--' + index % 3]}`}
             transformTemplate={
                 ({ rotateY, scale , x}) => {
                     x = x && x.toString().replace('px', '%')
                     return `scale(${scale}) rotate3d(0, 1, 0, ${rotateY}) translateX(${x})`
                 }
             }
-            style={{ rotateY, scale, transformOrigin, x: getCloser }}
+            style={{ rotateY, scale, transformOrigin, x: skidCardX}}
         />
     )
 }

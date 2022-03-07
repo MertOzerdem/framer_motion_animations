@@ -5,13 +5,15 @@ import ItemShowcase from './views/ItemShowcase/ItemShowcase';
 import TabNavigation from './components/TabNavigation/TabNavigation';
 import CardList from './components/CardList/CardList';
 import Carousel from './components/Carousel/Carousel';
+import FloatingActionButton from './components/FloatingActionButton/FloatingActionButton';
 
 const components = [
   <WhellSelector />,
   <ItemShowcase />,
   <TabNavigation />,
   <CardList />,
-  <Carousel />
+  <Carousel />, // fix for desktop and large devices later 
+  <FloatingActionButton />
 ]
 
 function App() {
