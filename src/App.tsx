@@ -6,6 +6,7 @@ import TabNavigation from './components/TabNavigation/TabNavigation';
 import CardList from './components/CardList/CardList';
 import Carousel from './components/Carousel/Carousel';
 import FloatingActionButton from './components/FloatingActionButton/FloatingActionButton';
+import DynamicGrid from './components/DynamicGrid/DynamicGrid';
 
 const components = [
   <WhellSelector />,
@@ -13,7 +14,8 @@ const components = [
   <TabNavigation />,
   <CardList />,
   <Carousel />, // fix for desktop and large devices later 
-  <FloatingActionButton />
+  <FloatingActionButton />,
+  <DynamicGrid />
 ]
 
 function App() {

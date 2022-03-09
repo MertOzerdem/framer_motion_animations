@@ -1,0 +1,47 @@
+$bck-color: #6633FF;
+
+$item-color: #FFF;
+$item-margin: 10px;
+$item-heigth: 50vh;
+$item-border-radius: 6px;
+
+.toggleButton {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: $bck-color;
+}
+
+.itemWrapper {
+    position: relative;
+    width: 100%;
+    height: calc((2 * $item-margin) + 25%);
+    overflow: hidden;
+}
+
+.item {
+    position: absolute;
+    border-radius: $item-border-radius;
+    background-color: $item-color;
+    transform-origin: 50% 50% 0px;
+    margin: $item-margin;
+
+    &:nth-child(odd) {
+        top: 0px;
+        left: 0px;
+    }
+
+    &:nth-child(even) {
+        bottom: 0px;
+        right: 0px;
+    }
+}
