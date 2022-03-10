@@ -9,17 +9,6 @@ interface SVG {
 
 const items = ["A", "B", "C", "D", "E", "F"];
 
-const variants = {
-	list: {
-		height: "calc(50% - 20px)",
-		width: "calc(100% - 20px)",
-	},
-	block: {
-		height: "calc(100% - 20px)",
-		width: "calc(50% - 20px)",
-	},
-};
-
 const GridSvg = ({clickEvent, className}:SVG) => {
 	return (
 		<motion.svg
@@ -34,7 +23,7 @@ const GridSvg = ({clickEvent, className}:SVG) => {
 			strokeLinejoin="round"
             className={className}
             onClick={() => clickEvent()}
-            initial={{opacity: 1}}
+            initial={false}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
 		>
@@ -60,7 +49,7 @@ const ListSvg = ({clickEvent, className}:SVG) => {
 			strokeLinejoin="round"
             className={className}
             onClick={() => clickEvent()}
-            initial={{opacity: 1}}
+            initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0}}
 		>
@@ -72,6 +61,29 @@ const ListSvg = ({clickEvent, className}:SVG) => {
 			<line x1="3" y1="18" x2="3.01" y2="18"></line>
 		</motion.svg>
 	)
+};
+
+
+const margin = '20px'
+const variants = {
+	list: {
+		height: `calc(50% - ${margin})`,
+		width: `calc(100% - ${margin})`,
+        transition: {
+            type: 'spring',
+            stiffness: 300,
+            damping: 25,
+        }
+	},
+	block: {
+		height: `calc(100% - ${margin})`,
+		width: `calc(50% - ${margin})`,
+        transition: {
+            type: 'spring',
+            stiffness: 300,
+            damping: 25,
+        }
+	},
 };
 
 const DynamicGrid = () => {
